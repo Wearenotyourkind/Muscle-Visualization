@@ -7,15 +7,12 @@ import ScorePage from "./ScorePage";
 const Contents=()=>{
     return(
       <>
-          <Card title="헬린이 운동하자!!!" >
-              <ScorePage dataRoute={'index'}/>
+          <Card title="헬린이 운동하자!!!" style={{margin:'1vh',top:'10vh',boxShadow: '3px 3px 3px 3px #cccccc'}}>
 
+              <StartPage/>
+              <ExercisePage/>
+              <ScorePage/>
 
-
-              <div style={{textAlign:'center',display:'flex'}}>
-                  <Button type='primary' style={{margin:'2vh'}}>뒤로</Button>
-                  <Button type='primary' style={{margin:'2vh'}}>처음으로</Button>
-              </div>
           </Card>
       </>
     );

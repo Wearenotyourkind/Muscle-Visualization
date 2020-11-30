@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import firebase from "../store/_config";
+import { Spin } from 'antd';
 
 
 const Score=()=>{
@@ -10,10 +11,9 @@ const Score=()=>{
         exerciseRef.on('value',(snapshot)=>{
             const exerciseSnapshot=snapshot.val();
             const exercise =[];
-            for (let id in exerciseSnapshot){
-                exercise.push(exerciseSnapshot[id]);
+            for (let index in exerciseSnapshot){
+                exercise.push(exerciseSnapshot[index]);
             }
-            console.log(exercise);
             setExercise(exercise);
 
 
@@ -23,7 +23,7 @@ const Score=()=>{
     return(
         <>
             <div>
-                {exercise ? exercise.map((exer)=>(<h1>{exer}</h1>)):''}
+                {exercise ? exercise.map((exer)=>(<h1>{exer}</h1>)):<Spin/>}
             </div>
         </>
     )
