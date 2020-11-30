@@ -1,6 +1,5 @@
-import {Button, Card, Select} from 'antd';
+import {Button, Card, Checkbox} from 'antd';
 import React from "react";
-const { Option } = Select;
 
 
 const StartPage=()=>{
@@ -8,11 +7,10 @@ const StartPage=()=>{
       <>
           <div>
               <Card type="inner" title="운동 선택하기" style={{textAlign:'center',display:'flex',flexDirection:'column'}}>
-                  <Select style={{width:'20vh',margin:'1vh'}}>
-                      <Option value="pushup">Push Up</Option>
-                      <Option value="benchpress">Bench Press</Option>
-                      <Option value="sidelateralraise">Side Lateral Raise</Option>
-                  </Select>
+
+                  <Checkbox>Push Up</Checkbox>
+                  <Checkbox >Bench Press</Checkbox>
+                  <Checkbox >Side Lateral Raise</Checkbox>
 
                   <Button type='primary'>시작하기</Button>
               </Card>
