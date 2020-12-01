@@ -1,12 +1,16 @@
 import {Button, Card,Spin} from 'antd';
 import React,{useState,useEffect} from "react";
 import firebase from "../store/_config";
-
-
+import {useDispatch, useSelector} from "react-redux";
+import {pageSet} from "../reducers";
 
 
 const StartPage=()=>{
+    const dispatch =useDispatch();
+    const pageToView = useSelector((state)=>state.page);
+
     const [exercise, setExercise]=useState('');
+
 
     useEffect(()=>{
         const exerciseRef=firebase.database().ref('try');
@@ -21,6 +25,11 @@ const StartPage=()=>{
 
         });
     },[]);
+
+
+
+
+
     return(
       <>
           <div>
@@ -30,7 +39,7 @@ const StartPage=()=>{
                       선택된 운동
                       <h1 style={{Color:'red'}}>{exercise ? exercise:<Spin/>}</h1>
                   </div>
-                  <Button type='primary'>시작하기</Button>
+
               </Card>
 
           </div>

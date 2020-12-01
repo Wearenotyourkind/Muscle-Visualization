@@ -1,7 +1,14 @@
 import {Card} from 'antd';
 import React from "react";
+import {useSelector} from "react-redux";
+
+
 
 const ExercisePage=()=>{
+    const preTime = useSelector((state)=>state.seconds.preTime);
+    const countDown=(sec)=>{
+
+    };
 
     return(
         <>
@@ -10,10 +17,10 @@ const ExercisePage=()=>{
 
                     <div>
                         <h1>
-                            준비
+                            준비 시간!
                         </h1>
                         <h1>
-                            {}
+                            {preTime}
                         </h1>
                     </div>
                     <div>
