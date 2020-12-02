@@ -1,13 +1,10 @@
-import {Button, Card,Spin} from 'antd';
+import {Card,Spin} from 'antd';
 import React,{useState,useEffect} from "react";
 import firebase from "../store/_config";
-import {useDispatch, useSelector} from "react-redux";
-import {pageSet} from "../reducers";
 
 
 const StartPage=()=>{
-    const dispatch =useDispatch();
-    const pageToView = useSelector((state)=>state.page);
+
 
     const [exercise, setExercise]=useState('');
 
@@ -25,9 +22,6 @@ const StartPage=()=>{
 
         });
     },[]);
-
-
-
 
 
     return(
