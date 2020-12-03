@@ -6,7 +6,7 @@ export const initialState ={
         preTime:3,
         time: 10
     },
-    page:1,
+    page:0,
 };
 
 

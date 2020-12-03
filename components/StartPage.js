@@ -1,4 +1,4 @@
-import {Card,Spin} from 'antd';
+import {Card,Spin,Image} from 'antd';
 import React,{useState,useEffect} from "react";
 import firebase from "../store/_config";
 
@@ -23,6 +23,7 @@ const StartPage=()=>{
         });
     },[]);
 
+    let imgSrc='../images/'+exercise+".gif";
 
     return(
       <>
@@ -32,6 +33,8 @@ const StartPage=()=>{
                   <div>
                       선택된 운동
                       <h1 style={{Color:'red'}}>{exercise ? exercise:<Spin/>}</h1>
+
+                        <Image src={imgSrc} alt='exerciseImg' style={{width:'20vh',height:"20vh"}}/>
                   </div>
 
               </Card>

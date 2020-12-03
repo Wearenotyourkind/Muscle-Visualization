@@ -20,7 +20,7 @@ const ExercisePage=()=> {
             <div>
                 <Card type="inner" title="운동하자!!" style={{textAlign:'center',display:'flex',flexDirection:'column'}}>
                     {
-                        exerciseStart===1 ? <img src='../images/anigif.gif' alt='3 countdown' style={{width:'35vh'}}/> :<div><h1>10 Reps 종료!</h1> <h2>점수를 계산중입니다.<br/> 잠시만 기다려주세요</h2><Spin/></div>
+                        exerciseStart===1 ? <img src='../images/anigif.gif' alt='3 countdown' style={{width:'35vh'}}/> :<div><h1>10 Reps 종료!</h1> <h2>점수를 계산중입니다.<br/> 다음 버튼을 눌러주세요</h2><Spin/></div>
                     }
 
 
