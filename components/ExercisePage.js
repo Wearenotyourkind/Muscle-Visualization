@@ -2,9 +2,12 @@ import {Card,Spin} from 'antd';
 import React,{useRef,useCallback} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {exerciseSet} from "../reducers";
+import useSound from '../hooks/useSound';
 
 
 const ExercisePage=()=> {
+    const BGM ='../audio/count.m4a';
+    useSound(BGM, 1, 2000);
     let preCount=useRef(parseInt(1));
     const exerciseStart = useSelector((state)=>{
         return state.exercise;
