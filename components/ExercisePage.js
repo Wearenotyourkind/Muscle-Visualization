@@ -6,7 +6,11 @@ import {exerciseSet} from "../reducers";
 
 const ExercisePage=()=> {
     let preCount=useRef(parseInt(1));
-    const exerciseStart = useSelector((state)=>state.exercise);
+    const exerciseStart = useSelector((state)=>{
+        return state.exercise;
+    });
+
+
     const dispatch = useDispatch();
 
     const onStartExercise =useCallback(()=>{
@@ -14,13 +18,13 @@ const ExercisePage=()=> {
         console.log('onStartExercise');
     },[]);
 
-    setTimeout(onStartExercise,15000);
+    setTimeout(onStartExercise,35000);
     return(
         <>
             <div>
                 <Card type="inner" title="운동하자!!" style={{textAlign:'center',display:'flex',flexDirection:'column'}}>
                     {
-                        exerciseStart===1 ? <img src='../images/anigif.gif' alt='3 countdown' style={{width:'35vh'}}/> :<div><h1>10 Reps 종료!</h1> <h2>점수를 계산 완료!<br/> 다음 버튼을 눌러주세요</h2><Spin/></div>
+                        exerciseStart===1 ? <img src='../images/Exercise.gif' alt='3 countdown' style={{width:'35vh'}}/> :<div><h1>10 Reps 종료!</h1> <h2>점수를 계산 완료!<br/> 다음 버튼을 눌러주세요</h2><Spin/></div>
                     }
                 </Card>
 

@@ -13,6 +13,7 @@
     "antd": "^4.8.6",
     "antd-icons": "0.1.0-alpha.1",
     "firebase": "^8.1.1",
+    "howler": "^2.2.1",
     "next": "^10.0.3",
     "next-redux-wrapper": "^6.0.2",
     "nodemon": "^2.0.6",
