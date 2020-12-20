@@ -1,10 +1,9 @@
 import React,{useCallback} from 'react';
 import {Button, Card, Image} from 'antd';
 import StartPage from './StartPage';
-import ExercisePage from "./ExercisePage";
-import ScorePage from "./ScorePage";
 import {useSelector,useDispatch} from "react-redux";
 import {pageSet} from "../reducers";
+import Score from "./Score";
 
 
 const Contents=()=>{
@@ -20,10 +19,6 @@ const Contents=()=>{
 
     const onClickSecondPage =useCallback(()=>{
         dispatch(pageSet(2));
-        console.log('page redux:'+page);
-    },[]);
-    const onClickThirdPage =useCallback(()=>{
-        dispatch(pageSet(3));
         console.log('page redux:'+page);
     },[]);
 
@@ -48,7 +43,6 @@ const Contents=()=>{
                           </div>
                       </>
                   }
-
                   {
                       page ===1 && <div>
                                 <StartPage/>
@@ -56,15 +50,9 @@ const Contents=()=>{
                             </div>
                   }
                   {
-                      page ===2 && <div >
-                          <ExercisePage/>
-                          <Button onClick={onClickThirdPage} style={{margin:'1vh'}}>다음으로</Button>
-                      </div>
-                  }
-                  {
-                      page ===3 && <div >
-                              <ScorePage/>
-                              <Button type='primary' onClick={onClickReset} style={{margin:'1vh'}}>처음으로</Button>
+                      page ===2 && <div style={{textAlign:'center'}}>
+                              <Score/>
+                              <Button type='primary' onClick={onClickReset} style={{margin:'1vh'}}>그만하기</Button>
                           </div>
                   }
               </div>

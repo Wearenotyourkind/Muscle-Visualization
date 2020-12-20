@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import firebase from "../store/_config";
 import { Spin } from 'antd';
+import {HeartOutlined} from "@ant-design/icons";
 
 
 const Score=()=>{
@@ -15,19 +16,19 @@ const Score=()=>{
                 exercise.push(exerciseSnapshot[index]);
             }
             setExercise(exercise);
-
-
         });
     },[]);
+
+
 
     return(
         <>
             <div>
-                {exercise ? exercise.map((exer)=>(<h1>{exer}</h1>)):<Spin/>}
+                {exercise ?<HeartOutlined style={{fontSize:`${exercise[1]*100}rem`}}/>:<Spin/>}
             </div>
         </>
     )
-}
+};
 
 
 export default Score;

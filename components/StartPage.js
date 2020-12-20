@@ -29,11 +29,8 @@ const StartPage=()=>{
       <>
           <div>
               <Card type="inner" title="운동 선택하기" style={{textAlign:'center',display:'flex',flexDirection:'column'}}>
-                  <p>헬린이 보드에서 운동을 선택해 주세요</p>
                   <div>
-                      선택된 운동
                       <h1 style={{Color:'red'}}>{exercise ? exercise:<Spin/>}</h1>
-
                         <Image src={imgSrc} alt='exerciseImg' style={{width:'20vh',height:"20vh"}}/>
                   </div>
 
