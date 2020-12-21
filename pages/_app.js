@@ -8,7 +8,7 @@ const App=({Component})=>{
     return(
             <>
                 <Head>
-                    <title>바른자세 헬린이</title>
+                    <title>Muscle Art</title>
                 </Head>
 
                 <Component />
