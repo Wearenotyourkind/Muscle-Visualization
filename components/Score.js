@@ -24,7 +24,7 @@ const Score=()=>{
         0% { transform: scale(1); }
         50% { 
             transform: scale(${exercise[1]*0.07}); 
-            filter: drop-shadow(1vh 1vh 2vh rgba(${(exercise[1]/10)**(exercise[1]/30)}, ${exercise[1]}, ${exercise[1]**(exercise[1])}, 1))
+            filter: drop-shadow(1vh 1vh 2vh rgba(${(exercise[1]/10)**(exercise[1]/30)}, ${(exercise[1]/20)**2}, ${exercise[1]**(exercise[1])}, 1))
             }
         100% { transform: scale(1); }
     `;
